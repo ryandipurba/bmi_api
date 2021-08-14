@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
 
 app.post("/bmi", (req, res) => {
   let name = req.body.name;
+  let age = req.body.age;
   let height = req.body.height;
   let weight = req.body.weight;
   let bmi = Countbmi(weight, height);
@@ -36,6 +37,7 @@ app.post("/bmi", (req, res) => {
 
   res.json({
     name: name,
+    age: age,
     height: height,
     weight: weight,
     bmi: bmi,
