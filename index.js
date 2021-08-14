@@ -20,6 +20,10 @@ bmiCategory = (bmi) => {
   }
 }
 
+app.get("/", (req, res) => {
+  res.send("Hello Quotes!");
+});
+
 app.post("/bmi", (req, res) => {
   let name = req.body.name;
   let height = req.body.height;
